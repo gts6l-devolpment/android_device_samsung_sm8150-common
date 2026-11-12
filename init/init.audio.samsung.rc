@@ -1,0 +1,67 @@
+on post-fs-data
+    chown system radio /sys/class/audio/earjack/key_state
+    chown system radio /sys/class/audio/earjack/mic_adc
+    chown system radio /sys/class/audio/earjack/select_jack
+    chown system radio /sys/class/audio/earjack/state
+    chown system radio /sys/class/audio/earjack/headset_state
+
+    chown system audio /sys/class/cirrus/cirrus_cal/status
+    chown system audio /sys/class/cirrus/cirrus_cal/rdc
+    chown system audio /sys/class/cirrus/cirrus_cal/rdc_r
+    chown system audio /sys/class/cirrus/cirrus_cal/rdc_b
+    chown system audio /sys/class/cirrus/cirrus_cal/rdc_br
+    chown system audio /sys/class/cirrus/cirrus_cal/temp
+    chown system audio /sys/class/cirrus/cirrus_cal/temp_r
+    chown system audio /sys/class/cirrus/cirrus_cal/temp_b
+    chown system audio /sys/class/cirrus/cirrus_cal/temp_br
+    chown system audio /sys/class/cirrus/cirrus_cal/v_status
+    chown system audio /sys/class/cirrus/cirrus_cal/v_validation
+    chown system audio /sys/class/cirrus/cirrus_cal/v_validation_r
+    chown system audio /sys/class/cirrus/cirrus_cal/v_validation_b
+    chown system audio /sys/class/cirrus/cirrus_cal/v_validation_br
+    mkdir /efs/cirrus 0770 audioserver audio
+    chown audioserver audio /efs/cirrus/temp_cal
+    chown audioserver audio /efs/cirrus/rdc_cal
+    chown audioserver audio /efs/cirrus/rdc_cal_r
+    chown audioserver audio /efs/cirrus/rdc_cal_b
+    chown audioserver audio /efs/cirrus/rdc_cal_br
+    chmod 0660 /efs/cirrus/temp_cal
+    chmod 0660 /efs/cirrus/rdc_cal
+    chmod 0660 /efs/cirrus/rdc_cal_r
+    chmod 0660 /efs/cirrus/rdc_cal_b
+    chmod 0660 /efs/cirrus/rdc_cal_br
+
+    chown system audio /sys/class/cirrus/cirrus_pwr/status
+    chown system audio /sys/class/cirrus/cirrus_pwr/value
+    chown system audio /sys/class/cirrus/cirrus_pwr/value_r
+    chown system audio /sys/class/cirrus/cirrus_pwr/value_b
+    chown system audio /sys/class/cirrus/cirrus_pwr/value_br
+    chown system audio /sys/class/cirrus/cirrus_pwr/spk_t
+    chown system audio /sys/class/cirrus/cirrus_pwr/spk_t_r
+    chown system audio /sys/class/cirrus/cirrus_pwr/spk_t_b
+    chown system audio /sys/class/cirrus/cirrus_pwr/spk_t_br
+    chown system audio /sys/class/cirrus/cirrus_pwr/env_temp
+    chown system audio /sys/class/cirrus/cirrus_pwr/env_temp_r
+    chown system audio /sys/class/cirrus/cirrus_pwr/env_temp_b
+    chown system audio /sys/class/cirrus/cirrus_pwr/env_temp_br
+
+    chown system audio /sys/class/cirrus/cirrus_bd/max_exc
+    chown system audio /sys/class/cirrus/cirrus_bd/max_exc_r
+    chown system audio /sys/class/cirrus/cirrus_bd/max_exc_b
+    chown system audio /sys/class/cirrus/cirrus_bd/max_exc_br
+    chown system audio /sys/class/cirrus/cirrus_bd/max_temp
+    chown system audio /sys/class/cirrus/cirrus_bd/max_temp_r
+    chown system audio /sys/class/cirrus/cirrus_bd/max_temp_b
+    chown system audio /sys/class/cirrus/cirrus_bd/max_temp_br
+    chown system audio /sys/class/cirrus/cirrus_bd/max_temp_keep
+    chown system audio /sys/class/cirrus/cirrus_bd/max_temp_keep_r
+    chown system audio /sys/class/cirrus/cirrus_bd/max_temp_keep_b
+    chown system audio /sys/class/cirrus/cirrus_bd/max_temp_keep_br
+    chown system audio /sys/class/cirrus/cirrus_bd/over_exc_count
+    chown system audio /sys/class/cirrus/cirrus_bd/over_exc_count_r
+    chown system audio /sys/class/cirrus/cirrus_bd/over_exc_count_b
+    chown system audio /sys/class/cirrus/cirrus_bd/over_exc_count_br
+    chown system audio /sys/class/cirrus/cirrus_bd/over_temp_count
+    chown system audio /sys/class/cirrus/cirrus_bd/over_temp_count_r
+    chown system audio /sys/class/cirrus/cirrus_bd/over_temp_count_b
+    chown system audio /sys/class/cirrus/cirrus_bd/over_temp_count_br
